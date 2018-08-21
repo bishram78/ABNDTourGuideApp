@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TourGuideApp</string>
+    <string name="txt_jharkhand">JHARKHAND</string>
+    <string name="txt_tour_guide">TOUR GUIDE</string>
 </resources>
