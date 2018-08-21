@@ -1,11 +1,11 @@
-package com.bishram.tour.guide;
+package com.bishram.tour.guide.activities;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.bishram.tour.guide.activities.MainActivity;
+import com.bishram.tour.guide.R;
 
 public class SplashActivity extends AppCompatActivity {
 
