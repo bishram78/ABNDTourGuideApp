@@ -24,7 +24,7 @@ public class DamsLakesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_dams_lakes, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_location_list, container, false);
 
         ArrayList<LocationModel> arrayListOfLocation = new ArrayList<>();
         arrayListOfLocation.add(new LocationModel("Netarhat Dam (Latehar)",
@@ -51,7 +51,7 @@ public class DamsLakesFragment extends Fragment {
 
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), arrayListOfLocation);
 
-        ListView listView = rootView.findViewById(R.id.fr_dl_list_view);
+        ListView listView = rootView.findViewById(R.id.fragment_list_view);
         listView.setAdapter(locationAdapter);
 
         return rootView;

@@ -1,5 +1,6 @@
 package com.bishram.tour.guide.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -41,7 +42,8 @@ public class LocationAdapter extends ArrayAdapter<LocationModel> {
         TextView textViewSchedule = convertView.findViewById(R.id.loc_mod_schedule);
 
         assert currentLocationModel != null;
-        String stringReview = "( " + currentLocationModel.getReviewPoints() + " reviews)";
+        @SuppressLint("DefaultLocale") String stringReview = String.format("(%d %s)",
+                currentLocationModel.getReviewPoints(), getContext().getString(R.string.txt_reviews));
 
         textViewLocName.setText(currentLocationModel.getLocationName());
         imageViewBanner.setImageResource(currentLocationModel.getImageResourceID());
@@ -49,6 +51,7 @@ public class LocationAdapter extends ArrayAdapter<LocationModel> {
         ratingBarStars.setRating((float)currentLocationModel.getRatings());
         textViewReviews.setText(stringReview);
         textViewDistance.setText(currentLocationModel.getDistanceMsg());
+        textViewDistance.setSelected(true);
         textViewSchedule.setText(currentLocationModel.getSchedule());
 
         return convertView;

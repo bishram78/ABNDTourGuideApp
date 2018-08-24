@@ -11,13 +11,11 @@ import java.util.List;
 
 public class CategoryAdapter extends FragmentPagerAdapter {
 
-    private Context mContext;
     private final List<Fragment> fragmentList = new ArrayList<>();
     private final List<String> fragmentTitle = new ArrayList<>();
 
     public CategoryAdapter(Context context, FragmentManager fragmentManager) {
         super(fragmentManager);
-        mContext = context;
     }
 
     public void addFragment(Fragment fragment, String stringTitle) {
