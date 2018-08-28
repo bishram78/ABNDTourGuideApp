@@ -2,7 +2,7 @@
 This is the fourth project of Google India Challenge Scholarship Project NAMED AS *TourGuideApp*
 
 
-# Following are some screenshotes
+# Following are some screenshots
 *THE SPLASH SCREEN*
 
 ![screenshot_2018-08-28-13-51-37-338_com bishram tour guide](https://user-images.githubusercontent.com/37131841/44710714-6508ee80-aaca-11e8-8687-b406e0e58391.png)
