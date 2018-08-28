@@ -18,6 +18,7 @@ package com.bishram.tour.guide.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,45 +31,46 @@ import com.bishram.tour.guide.models.LocationModel;
 
 import java.util.ArrayList;
 
-public class DamsLakesFragment extends Fragment {
+public class OthersFragment extends Fragment {
 
-    public DamsLakesFragment() {
+    public OthersFragment() {
         /* Required empty public constructor. */
     }
 
+    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_location_list, container, false);
 
         // Create an ArrayList instance of LocationModel.
-        ArrayList<LocationModel> arrayListOfLocation = new ArrayList<>();
+        ArrayList<LocationModel> locationModelArrayList = new ArrayList<>();
 
         // Add list of Location {@link LocationModel} object to the ArrayList.
-        arrayListOfLocation.add(new LocationModel(getString(R.string.netarhat_dam),
-                R.drawable.dam_lake_netarhat_01,4.3,112,getString(R.string.txt_open_all_day)));
-        arrayListOfLocation.add(new LocationModel(getString(R.string.chandil_dam),
-                R.drawable.dam_lake_chandil_01, 3.6, 250,getString(R.string.txt_open_all_day)));
-        arrayListOfLocation.add(new LocationModel(getString(R.string.hatia_dam),
-                R.drawable.dam_lake_hatia_01, 2.9, 80,getString(R.string.txt_open_all_day)));
-        arrayListOfLocation.add(new LocationModel(getString(R.string.patratu_dam),
-                R.drawable.dam_lake_patratu_01, 4.0, 377,getString(R.string.txt_open_all_day)));
-        arrayListOfLocation.add(new LocationModel(getString(R.string.tilaiya_dam),
-                R.drawable.dam_lake_tilaiya_01, 1.8, 27,getString(R.string.txt_open_all_day)));
-        arrayListOfLocation.add(new LocationModel(getString(R.string.tenughat_dam),
-                R.drawable.dam_lake_tenughat_01,2.6, 39,getString(R.string.txt_open_all_day)));
-        arrayListOfLocation.add(new LocationModel(getString(R.string.massanjore_dam),
-                R.drawable.dam_lake_massanjore_01,3.0, 44,getString(R.string.txt_open_all_day)));
+        locationModelArrayList.add(new LocationModel(getString(R.string.deuridih_rural),
+                R.drawable.others_deuridih_rural_01,4.2,465,getString(R.string.open_day_time)));
+        locationModelArrayList.add(new LocationModel(getString(R.string.sunrise_point),
+                R.drawable.others_sunrise_point_01,2.3,56,getString(R.string.open_530pm)));
+        locationModelArrayList.add(new LocationModel(getString(R.string.mccluskieganj),
+                R.drawable.others_mccluskieganj_01,4.2,465," "));
+        locationModelArrayList.add(new LocationModel(getString(R.string.rikhia_ashram),
+                R.drawable.others_rikhia_yoga_ashram_01,4.2,465,getString(R.string.open_500am)));
+        locationModelArrayList.add(new LocationModel(getString(R.string.tagore_hill),
+                R.drawable.others_tagore_hill_01,2.3,56,getString(R.string.open_1030am)));
+        locationModelArrayList.add(new LocationModel(getString(R.string.palamu_fort),
+                R.drawable.others_palamu_fort_01,4.2,465," "));
+        locationModelArrayList.add(new LocationModel(getString(R.string.water_sports),
+                R.drawable.others_water_sport_01,4.2,465,getString(R.string.open_400pm)));
 
         //Create and instance of {@LocationAdapter} that knows how to show list items in list view.
-        LocationAdapter locationAdapter = new LocationAdapter(getActivity(), arrayListOfLocation);
+        LocationAdapter locationAdapterOthers = new LocationAdapter(getActivity(), locationModelArrayList);
 
         // Find the {@link ListView} View in the fragment_location_list.xml
-        ListView listView = rootView.findViewById(R.id.fragment_list_view);
+        ListView listViewOthers = rootView.findViewById(R.id.fragment_list_view);
 
         // Set the custom adapter {@link LocationAdapter} to the list view.
-        listView.setAdapter(locationAdapter);
+        listViewOthers.setAdapter(locationAdapterOthers);
 
         // Return the above created view to the activity where it is attached.
         // Here in this case to MainActivity.java

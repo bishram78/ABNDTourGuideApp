@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="240dp">
+    android:layout_height="@dimen/_240dp">
 
     <ImageView
         android:id="@+id/loc_mod_banner"
@@ -16,88 +16,78 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#FFF"
-        android:orientation="vertical"
-        android:paddingBottom="20dp"
-        android:paddingEnd="24dp"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp"
-        android:paddingStart="24dp"
-        android:paddingTop="4dp">
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_20dp"
+        android:paddingEnd="@dimen/_24dp"
+        android:paddingLeft="@dimen/_24dp"
+        android:paddingRight="@dimen/_24dp"
+        android:paddingStart="@dimen/_24dp"
+        android:paddingTop="@dimen/_4dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/loc_mod_rating"
+                android:id="@+id/loc_mod_location_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                tools:text="3.8" />
-
-            <RatingBar
-                android:id="@+id/loc_mod_rating_stars"
-                style="?android:attr/ratingBarStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:rating="5" />
-
-            <TextView
-                android:id="@+id/loc_mod_no_of_review"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                tools:text="(132 Reviews)" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/loc_mod_distance"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:ellipsize="marquee"
                 android:marqueeRepeatLimit="marquee_forever"
                 android:singleLine="true"
-                android:textColor="@android:color/black"
-                tools:text="2.5 km from the city bus stand." />
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_18sp"
+                tools:text="Name of Location (Town Name)" />
 
-            <TextView
-                android:id="@+id/loc_mod_schedule"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:textColor="#0015FF"
-                tools:text="Opens at 10:30AM" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/loc_mod_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    tools:text="3.8" />
+
+                <RatingBar
+                    android:id="@+id/loc_mod_rating_stars"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_8dp"
+                    android:layout_marginStart="@dimen/_8dp"
+                    android:rating="5" />
+
+                <TextView
+                    android:id="@+id/loc_mod_no_of_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    tools:text="(132 Reviews)" />
+            </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/loc_mod_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_8dp"
+            android:layout_marginStart="@dimen/_8dp"
+            android:textAlignment="center"
+            android:textColor="@color/scheduleText"
+            tools:text="Opens at\n10:30AM" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="12dp"
-        android:background="@drawable/backgroud_border" />
-
-    <TextView
-        android:id="@+id/loc_mod_location_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:maxLines="2"
-        android:textColor="#ce007f"
-        android:textSize="18sp"
-        tools:text="Name of Location (Town Name)" />
+        android:layout_margin="@dimen/_12dp"
+        android:background="@drawable/background_border" />
 </RelativeLayout>

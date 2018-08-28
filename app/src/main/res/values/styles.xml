@@ -1,50 +1,48 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-
-    <!-- Base application theme. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- BASE APPLICATION THEME. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        <!-- BASE COLOR FOR THE TOOLBAR. -->
         <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!--BASE COLOR FOR THE STATUS BAR. -->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <!-- BASE COLOR FOR OTHER VIEWS AND WIDGETS LIKE CHECKBOXES ETC. -->
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
+    <!-- CUSTOM ACTION BAR STYLE. -->
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
+    <!-- CUSTOM TOOLBAR STYLE. -->
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="TourGuideAppBarStyle">
-        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
-    </style>
-
+    <!-- NO ACTION BAR CUSTOM THEME. -->
     <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
+
+    <!--FULLSCREEN CUSTOM THEME. -->
     <style name="FullscreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
-        <item name="actionBarStyle">@style/TourGuideAppBarStyle</item>
-        <item name="windowActionBarOverlay">@null</item>
     </style>
 
-    <!-- Style for the Rating Bar. -->
+    <!-- STYLE FOR THE RATING BAR VIEW. -->
     <style name="RatingBar" parent="Theme.AppCompat">
         <item name="colorControlNormal">@android:color/holo_green_dark</item>
         <item name="colorControlActivated">@android:color/holo_green_dark</item>
     </style>
 
-    <!-- Style for a tab that displays a category name -->
+    <!-- STYLE FOR A TAB THAT DISPLAYS A CATEGORY NAME. -->
     <style name="CategoryTab" parent="Widget.Design.TabLayout">
         <item name="tabIndicatorColor">@android:color/white</item>
         <item name="tabSelectedTextColor">@android:color/white</item>
         <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
     </style>
 
-    <!-- Text appearance style for a category tab -->
+    <!-- TEXT APPEARANCE STYLE FOR A CATEGORY TAB. -->
     <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
-        <item name="android:textColor">#23714A</item>
+        <item name="android:textColor">@color/tabText</item>
     </style>
 </resources>

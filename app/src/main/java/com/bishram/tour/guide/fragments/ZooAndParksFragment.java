@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2016 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.bishram.tour.guide.fragments;
 
 import android.os.Bundle;
@@ -24,28 +40,17 @@ public class ZooAndParksFragment extends Fragment {
         // Inflate the layout for this fragment.
         View rootView = inflater.inflate(R.layout.fragment_location_list, viewGroup, false);
 
-        // Create a list of Location {@link LocationModel}.
+        // Create Create an ArrayList instance of LocationModel {@link LocationModel}.
         ArrayList<LocationModel> locationArrayList = new ArrayList<>();
 
-        //Add list of location to the created ArrayList of location.
-        locationArrayList.add(new LocationModel("Birsa Deer Park, Kalamati",
-                R.drawable.waterfall_panch_ghat_01,2.3,56,
-                "23 Kms from capital city","Opens at 10:30AM"));
-        locationArrayList.add(new LocationModel("Sunrise Point, Netarhat",
-                R.drawable.waterfall_panch_ghat_01,2.3,56,
-                "156 Kms West of Ranchi","Opens at 10:30AM"));
-        locationArrayList.add(new LocationModel("Magnolia Sunset Point, Netarhat",
-                R.drawable.waterfall_panch_ghat_01,2.3,56,
-                "10 Kms from the town's main bus stand","Opens at 10:30AM"));
-        locationArrayList.add(new LocationModel("Jubilee Park, Jamshedpur",
-                R.drawable.waterfall_panch_ghat_01,2.3,56,
-                "136 Kms from Ranchi District","Opens at 10:30AM"));
-        locationArrayList.add(new LocationModel("Tagore Hill, Morhabadi",
-                R.drawable.waterfall_panch_ghat_01,2.3,56,
-                "7 Kms from the railway station","Opens at 10:30AM"));
-        locationArrayList.add(new LocationModel("Rock Garden, Kanke",
-                R.drawable.waterfall_panch_ghat_01,2.3,56,
-                "8 Kms from the railway station","Opens at 10:30AM"));
+        // Add list of Location {@link LocationModel} object to the ArrayList.
+        locationArrayList.add(new LocationModel(getString(R.string.birsa_deer_park),
+                R.drawable.zoo_park_birsa_deer_01,2.3,56,getString(R.string.open_1030am)));
+        locationArrayList.add(new LocationModel(getString(R.string.jubilee_park),
+                R.drawable.zoo_park_jubilee,2.3,56,getString(R.string.open_1030am)));
+        locationArrayList.add(new LocationModel(getString(R.string.rock_garden),
+                R.drawable.zoo_park_rock_garden,2.3,56,getString(R.string.open_1030am)));
+
         //Create and instance of {@LocationAdapter} that knows how to show list items in list view.
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locationArrayList);
 
@@ -54,6 +59,9 @@ public class ZooAndParksFragment extends Fragment {
 
         // Set the custom adapter {@link LocationAdapter} to the list view.
         listViewZooParks.setAdapter(locationAdapter);
+
+        // Return the above created view to the activity where it is attached.
+        // Here in this case to MainActivity.java
         return rootView;
     }
 }

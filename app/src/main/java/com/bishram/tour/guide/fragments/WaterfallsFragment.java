@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2016 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.bishram.tour.guide.fragments;
 
 import android.os.Bundle;
@@ -18,49 +34,50 @@ import java.util.ArrayList;
 public class WaterfallsFragment extends Fragment {
 
     public WaterfallsFragment() {
-        // Required empty public constructor
+        /* Required empty public constructor. */
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_location_list, container, false);
 
+        // Create an ArrayList instance of LocationModel.
         ArrayList<LocationModel> arrayListOfLocation = new ArrayList<>();
-        arrayListOfLocation.add(new LocationModel("Hirni Fall (Ranchi)",
-                R.drawable.waterfall_hirni_01,5.0,50,
-                "25 Kms from city mall", "24x7 Opened"));
-        arrayListOfLocation.add(new LocationModel("Dassam Fall",
-                R.drawable.waterfall_dassam_01,4.6,46,
-                "49 Kms from main town", "24x7 Opened"));
-        arrayListOfLocation.add(new LocationModel("Lodh Waterfall (Netarhat)",
-                R.drawable.waterfall_lodh_01,4.8,48,
-                "48 Kms from city Bus Stand", "24x7 Opened"));
-        arrayListOfLocation.add(new LocationModel("Sita Fall",
-                R.drawable.waterfall_sita_01,4.1,41,
-                "41 Kms from Mohini Theatre", "24x7 Opened"));
-        arrayListOfLocation.add(new LocationModel("Lawapani Waterfall",
-                R.drawable.waterfall_lavapani_01,3.0,30,
-                "30 Kms from city hall", "24x7 Opened"));
-        arrayListOfLocation.add(new LocationModel("Hundru Fall (Ranchi)",
-                R.drawable.waterfall_hundru_01,3.8,38,
-                "38 Kms from Ranchi Town", "24x7 Opened"));
-        arrayListOfLocation.add(new LocationModel("Ursi Waterfall (Giridih)",
-                R.drawable.waterfall_usri_01,3.6,36,
-                "36 Kms from Giridih bus stand", "24x7 Opened"));
-        arrayListOfLocation.add(new LocationModel("Mirchaiya Fall (Latehar)",
-                R.drawable.waterfall_mirchaiya_01,4.0,40,
-                "40 Kms from Town bus stand", "24x7 Opened"));
-        arrayListOfLocation.add(new LocationModel("Panch Ghat Fall",
-                R.drawable.waterfall_panch_ghat_01,3.9,39,
-                "39 Kms from city bus stand", "24x7 Opened"));
 
+        // Add list of Location {@link LocationModel} object to the ArrayList.
+        arrayListOfLocation.add(new LocationModel(getString(R.string.hirni_fall),
+                R.drawable.waterfall_hirni_01,5.0,50,getString(R.string.open_24x7)));
+        arrayListOfLocation.add(new LocationModel(getString(R.string.dassam_fall),
+                R.drawable.waterfall_dassam_01,4.6,46,getString(R.string.open_24x7)));
+        arrayListOfLocation.add(new LocationModel(getString(R.string.lodh_waterfall),
+                R.drawable.waterfall_lodh_01,4.8,48,getString(R.string.open_24x7)));
+        arrayListOfLocation.add(new LocationModel(getString(R.string.sita_fall),
+                R.drawable.waterfall_sita_01,4.1,41,getString(R.string.open_24x7)));
+        arrayListOfLocation.add(new LocationModel(getString(R.string.lavapani_waterfall),
+                R.drawable.waterfall_lavapani_01,3.0,30,getString(R.string.open_24x7)));
+        arrayListOfLocation.add(new LocationModel(getString(R.string.hundru_fall),
+                R.drawable.waterfall_hundru_01,3.8,38,getString(R.string.open_24x7)));
+        arrayListOfLocation.add(new LocationModel(getString(R.string.ursi_waterfall),
+                R.drawable.waterfall_usri_01,3.6,36,getString(R.string.open_24x7)));
+        arrayListOfLocation.add(new LocationModel(getString(R.string.mirchaiya_fall),
+                R.drawable.waterfall_mirchaiya_01,4.0,40,getString(R.string.open_24x7)));
+        arrayListOfLocation.add(new LocationModel(getString(R.string.panch_ghat_fall),
+                R.drawable.waterfall_panch_ghat_01,3.9,39,getString(R.string.open_24x7)));
+
+        //Create and instance of {@LocationAdapter} that knows how to show list items in list view.
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), arrayListOfLocation);
 
+        // Find the {@link ListView} View in the fragment_location_list.xml
         ListView listView = rootView.findViewById(R.id.fragment_list_view);
+
+        // Set the custom adapter {@link LocationAdapter} to the list view.
         listView.setAdapter(locationAdapter);
 
+        // Return the above created view to the activity where it is attached.
+        // Here in this case to MainActivity.java
         return rootView;
     }
 }

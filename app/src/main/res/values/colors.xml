@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- BASE COLOR FOR THE APP BAR AS WELL AS TOOL BAR. -->
     <color name="colorPrimary">#3fb578</color>
+
+    <!-- BASE COLOR FOR THE STATUS BAR. -->
     <color name="colorPrimaryDark">#309f68</color>
+
+    <!-- BASE COLOR FOR OTHER VIEWS AND WIDGETS SUCH AS CHECK BOXES, TAB INDICATOR ETC. -->
     <color name="colorAccent">#FF4081</color>
+
+    <!-- THE TRANSLUCENT FOREGROUND COLOR FOR THE SPLASH SCREEN. -->
     <color name="colorSplash">#7000A31A</color>
+
+    <!-- THE COLOR FOR THE SCHEDULE TEXT. -->
+    <color name="scheduleText">#0015FF</color>
+
+    <!--THE COLOR FOR THE TAB TEXT. -->
+    <color name="tabText">#23714A</color>
 </resources>

@@ -1,13 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- NAME OF THE APPLICATION. -->
     <string name="app_name">TourGuideApp</string>
     <string name="txt_jharkhand">JHARKHAND</string>
     <string name="txt_tour_guide">TOUR GUIDE</string>
+
+    <!-- TITLE (TOOLBAR NAME) OF THE MAIN ACTIVITY. -->
     <string name="jh_to_guide">Jharkhand Tour Guide</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- NAME OF TABS/THE TITLE OF THE FRAGMENTS. -->
     <string name="txt_dams_lakes"><![CDATA[Dams & Lakes]]></string>
-    <string name="txt_reviews">reviews</string>
     <string name="txt_waterfalls">Waterfalls</string>
     <string name="txt_zoo_parks"><![CDATA[Zoo & Parks]]></string>
+    <string name="txt_other_attractions">Other Attractions</string>
+
+    <!-- LOCATIONS NAME OF DAMS AND LAKES FRAGMENT. -->
+    <string name="netarhat_dam">Netarhat Dam, Latehar</string>
+    <string name="chandil_dam">Chandil Dam, Jamshedpur</string>
+    <string name="hatia_dam">Hatia Dam, Dhurwa</string>
+    <string name="patratu_dam">Patratu Dam, Ranchi</string>
+    <string name="tilaiya_dam">Tilaiya Dam, Ramgarh</string>
+    <string name="tenughat_dam">Tenughat Dam, Bokaro</string>
+    <string name="massanjore_dam">Massanjore Dam, Dumka</string>
+
+    <!-- LOCATIONS NAME OF WATERFALLS FRAGMENT. -->
+    <string name="hirni_fall">Hirni Fall, Ranchi</string>
+    <string name="dassam_fall">Dassam Fall, Ranchi</string>
+    <string name="lodh_waterfall">Lodh Waterfall, Netarhat</string>
+    <string name="sita_fall">Sita Fall, Ramgarh</string>
+    <string name="lavapani_waterfall">Lavapani Waterfall, Lohardaga</string>
+    <string name="hundru_fall">Hundru Fall, Ranchi</string>
+    <string name="ursi_waterfall">Ursi Waterfall, Giridih</string>
+    <string name="mirchaiya_fall">Mirchaiya Fall, Latehar</string>
+    <string name="panch_ghat_fall">Panch Ghat Fall, Ranchi</string>
+
+    <!-- LOCATIONS NAME OF ZOO AND PARKS FRAGMENT. -->
+    <string name="birsa_deer_park">Birsa Deer Park, Kalamati</string>
+    <string name="jubilee_park">Jubilee Park, Jamshedpur</string>
+    <string name="rock_garden">Rock Garden, Kanke</string>
+
+    <!-- LOCATIONS NAME OF OTHER ATTRACTIONS FRAGMENT. -->
+    <string name="deuridih_rural">Deuridih Rural, Kharsawan</string>
+    <string name="sunrise_point">Sunrise Point, Netarhat</string>
+    <string name="mccluskieganj">McCluskieganj, Chhotanagpur</string>
+    <string name="rikhia_ashram">Rikhia Yoga Ashram, Deoghar</string>
+    <string name="tagore_hill">Tagore Hill, Morhabadi</string>
+    <string name="palamu_fort">Palamu Fort, Latehar</string>
+    <string name="water_sports">Water Sports, Giridih</string>
+
+    <!-- SCHEDULE TEXT STRINGS. -->
+    <string name="open_500am">Open at\n05:00AM</string>
+    <string name="open_1030am">Open at\n10:30AM</string>
+    <string name="open_400pm">Open at\n04:00PM</string>
+    <string name="open_530pm">Open at\n05:30PM</string>
+    <string name="open_24x7">Open\n24x7</string>
+    <string name="txt_open_all_day">Open\nAll Day</string>
+    <string name="open_day_time">Open\nDay Time</string>
+
+    <!-- TEXT STRING - THE REVIEWS. -->
+    <string name="txt_reviews">reviews</string>
 </resources>

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- PHYSICAL SIZES FOR THE LAYOUTS. -->
+    <dimen name="_4dp">4dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_24dp">24dp</dimen>
+
+    <!-- HEIGHT OF THE LIST VIEW ITEM (location_model.xml)-->
+    <dimen name="_240dp">240dp</dimen>
+
+    <!-- TEXT SIZES FOR THE LAYOUTS. -->
+    <dimen name="_18sp">18sp</dimen>
     <dimen name="_42sp">42sp</dimen>
     <dimen name="_52sp">52sp</dimen>
 </resources>
